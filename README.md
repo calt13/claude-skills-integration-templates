@@ -31,6 +31,7 @@ Skills install to `~/.claude/plugins/marketplaces/owner/repo/skills/`[[1]](https
 
 ```bash
 # Download template
+mkdir -p .agent
 curl -o .agent/CLAUDE_SKILLS_INTEGRATION.md \
   https://raw.githubusercontent.com/calt13/claude-skills-integration-templates/main/templates/generic/CLAUDE_SKILLS_INTEGRATION.md
 
@@ -88,7 +89,8 @@ Then use our template to teach your CLI about these locations.
 mkdir -p .agent
 curl -o .agent/CLAUDE_SKILLS_INTEGRATION.md \
   https://raw.githubusercontent.com/calt13/claude-skills-integration-templates/main/templates/generic/CLAUDE_SKILLS_INTEGRATION.md
-
+```
+``` agent-cli
 # Your CLI's /init will process this (effectiveness may vary by CLI)
 /init
 ```
@@ -100,7 +102,8 @@ curl -o .agent/CLAUDE_SKILLS_INTEGRATION.md \
 ```bash
 curl -o /tmp/skills-integration.md \
   https://raw.githubusercontent.com/calt13/claude-skills-integration-templates/main/templates/generic/CLAUDE_SKILLS_INTEGRATION.md
-
+```
+```bash
 cat /tmp/skills-integration.md >> AGENTS.md
 ```
 
@@ -116,7 +119,9 @@ For enhanced security or isolated environments, use the local-only template that
 # Download local-only template (scans only ./.agent/skills/ and ./.claude/skills/)
 curl -o .agent/CLAUDE_SKILLS_INTEGRATION.md \
   https://raw.githubusercontent.com/calt13/claude-skills-integration-templates/main/templates/generic/local-only/CLAUDE_SKILLS_INTEGRATION.md
+```
 
+```bash
 # Optional: Link global skills to project for controlled access
 ln -s ~/.claude/plugins/marketplaces/anthropics-skills ./.agent/skills/anthropic-skills
 ```
