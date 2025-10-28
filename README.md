@@ -86,12 +86,14 @@ Then use our template to teach your CLI about these locations.
 
 ```bash
 mkdir -p .agent
-curl -o .agent-templates/CLAUDE_SKILLS_INTEGRATION.md \
+curl -o .agent/CLAUDE_SKILLS_INTEGRATION.md \
   https://raw.githubusercontent.com/calt13/claude-skills-integration-templates/main/templates/generic/CLAUDE_SKILLS_INTEGRATION.md
 
-# Your CLI's /init will merge this
+# Your CLI's /init will process this (effectiveness may vary by CLI)
 /init
 ```
+
+**Note**: The `/init` command behavior varies across different CLIs - some may effectively integrate the template while others might not process it as expected. If you find skills aren't being discovered after `/init`, we recommend using **Method 2** or **Method 3** for more reliable results.
 
 ### Method 2: Manual Append
 
