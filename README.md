@@ -4,6 +4,8 @@
 
 > Drop-in Markdown snippets that enable **any Agent CLI** to discover and use [Claude Skills](https://github.com/anthropics/skills) — even if you primarily use a different CLI than Claude Code.
 
+**🚀 Try Now**: Give your web-capable agent this URL and say "install Claude Skills integration" → https://github.com/calt13/claude-skills-integration-templates
+
 ## 🎯 What This Solves
 
 Claude Skills are auto-discovered from three sources: `~/.claude/skills/`, `.claude/skills/` (project), and plugin Skills.[[1]](https://docs.claude.com/en/docs/claude-code/skills) But what if you're using **Codex CLI, Gemini CLI, Kimi CLI or other CLIs** alongside Claude Code?
@@ -27,8 +29,14 @@ This repo provides **AGENTS.md templates** that teach any agent how to:
 
 Skills install to `~/.claude/plugins/marketplaces/owner/repo/skills/`[[1]](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces)
 
-**Now you want Codex/Gemini/Kimi to use the same Skills** → Copy our template to teach them where to look!
+**Now you want Codex/Gemini/Kimi to use the same Skills** → Just give them this URL and let them handle the rest!
 
+**🚀 Easiest Way** (for web-capable agents):
+```
+Simply tell your agent: "Install Claude Skills integration from https://github.com/calt13/claude-skills-integration-templates"
+```
+
+**📋 Manual Way** (if needed):
 ```bash
 # Download template
 mkdir -p .agent
@@ -83,6 +91,27 @@ Then use our template to teach your CLI about these locations.
 
 ## 🚀 Quick Start
 
+**🆕 Easiest Method**: Have a web-capable agent? Just give it [this URL](https://github.com/calt13/claude-skills-integration-templates) and say "install Claude Skills integration" → No manual steps needed!
+
+### Method 0: Zero-Setup Installation (For Web-Capable Agents) ⭐
+
+**The easiest way** - if your agent has internet access, simply give it this URL:
+
+```
+https://github.com/calt13/claude-skills-integration-templates
+```
+
+Then ask your agent:
+> "Please install Claude Skills integration from this URL"
+
+**What happens**: Your agent will automatically fetch the templates, understand the installation process, and complete the setup for you.
+
+**✅ Best for**: Codex CLI, Kimi CLI, Gemini CLI, or any web-enabled agent
+**⚡ Effort**: Zero manual steps required
+**🎯 Success rate**: High (agents can adapt the installation to your specific environment)
+
+**Try this first!** If your agent successfully discovers and uses skills, you're all set. If not, proceed to the manual methods below.
+
 ### Method 1: Auto-Discovery (if your CLI scans `.agent/`)
 
 ```bash
@@ -95,7 +124,7 @@ curl -o .agent/CLAUDE_SKILLS_INTEGRATION.md \
 /init
 ```
 
-**Note**: The `/init` command behavior varies across different CLIs - some may effectively integrate the template while others might not process it as expected. If you find skills aren't being discovered after `/init`, we recommend using **Method 2** or **Method 3** for more reliable results.
+**Note**: The `/init` command behavior varies across different CLIs - some may effectively integrate the template while others might not process it as expected. If you find skills aren't being discovered after `/init`, we recommend using **Method 0**, **Method 2** or **Method 3** for more reliable results.
 
 ### Method 2: Manual Append
 
@@ -131,6 +160,31 @@ ln -s ~/.claude/plugins/marketplaces/anthropics-skills ./.agent/skills/anthropic
 - ✅ Project isolation prevents unintended skill access
 - ✅ Compatible with symbolic linking for controlled skill sharing
 - ✅ Ideal for CI/CD environments and shared development containers
+
+## 🤖 For Web-Capable Agents
+
+If your agent can access web content, installation is even easier:
+
+### One-Step Installation
+
+**Simply tell your agent:**
+> "Please install Claude Skills integration from https://github.com/calt13/claude-skills-integration-templates"
+
+**What your agent will do:**
+1. Fetch this repository
+2. Read the installation instructions
+3. Download the appropriate template
+4. Integrate it into your configuration
+5. Test skill discovery
+
+**Example conversations:**
+- "Can you install Claude Skills for me?"
+- "I want to use Claude Skills with this project"
+- "Help me set up skill discovery"
+
+**Supported agents:** Codex CLI, Kimi CLI, Gemini CLI, Claude Code, and any agent with web access capabilities.
+
+**Why this works**: Agents with web access can read this README, understand the installation process, and adapt it to your specific environment automatically.
 
 ## 📚 Skills Directory Structure
 
