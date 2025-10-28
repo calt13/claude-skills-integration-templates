@@ -1,0 +1,41 @@
+> Available Skills
+
+  - Project Skills (from ./.agent/skills)
+      - brainstorming: Use when developing ideas before writing code; guides structured questioning and validation.
+      - condition-based-waiting: Use to replace flaky timeout-based tests with state polling.
+      - defense-in-depth: Use when invalid data requires validation across every system layer.
+      - dispatching-parallel-agents: Use to investigate 3+ independent failures concurrently with separate agents.
+      - executing-plans: Use when handed a complete plan that needs batched execution with checkpoints.
+      - finishing-a-development-branch: Use once implementation and tests are done to choose the right integration path.
+      - receiving-code-review: Use to interpret and verify code review feedback before acting on it.
+      - requesting-code-review: Use before merging or completing major work to trigger a rigorous review.
+      - root-cause-tracing: Use to trace deep execution errors back to their original trigger.
+      - sharing-skills: Use to contribute newly developed skills upstream via PR.
+      - subagent-driven-development: Use when executing independent plan tasks with subagents and interim reviews.
+      - systematic-debugging: Use at the first sign of a bug or failing test to follow a four-phase debugging framework.
+      - test-driven-development: Use for any feature or bug fix to drive implementation with failing tests first.
+      - testing-anti-patterns: Use when modifying tests to avoid mocks-first and production pollution pitfalls.
+      - testing-skills-with-subagents: Use to pressure-test skills before deployment via RED-GREEN-REFACTOR loops.
+      - using-git-worktrees: Use to spin up isolated worktrees safely before starting new feature work.
+      - using-superpowers: Use at session start to enforce discovery, brainstorming, and checklist workflows.
+      - verification-before-completion: Use before declaring success to ensure evidence-backed verification.
+      - writing-plans: Use to turn designs into detailed, engineer-ready implementation plans.
+      - writing-skills: Use to create or refine skills with TDD-style validation against rationalization.
+  - User Skills (from ~/.claude/plugins/marketplaces/anthropic-agent-skills)
+      - algorithmic-art: Toolkit for procedurally generated visuals using algorithmic techniques.
+      - artifacts-builder: Workbench for assembling multi-step artifacts with quality guardrails.
+      - brand-guidelines: Guidance for crafting materials aligned with brand voice and visuals.
+      - canvas-design: Framework for designing structured canvases (e.g., product, strategy).
+      - docx: Full-spectrum Word document creation, editing, and tracked-change workflows.
+      - internal-comms: Templates and processes for polished internal company communications.
+      - mcp-builder: Guide for building Model Context Protocol servers in Python or TypeScript.
+      - pdf: Comprehensive PDF extraction, generation, form handling, and manipulation toolkit.
+      - pptx: Presentation authoring/editing workflows with layout and speaker note support.
+      - skill-creator: Step-by-step guide for crafting or updating Claude skills effectively.
+      - slack-gif-creator: Tools for designing Slack-optimized animated GIFs and emoji.
+      - template-skill: Placeholder skill awaiting customization with concrete instructions.
+      - theme-factory: System for applying or generating visual themes for various artifacts.
+      - webapp-testing: Playwright-based toolkit for exercising and validating web UIs locally.
+      - xlsx: Spreadsheet creation, analysis, and formula-preserving editing toolkit.
+
+  Let me know which skill you’d like me to load next.
